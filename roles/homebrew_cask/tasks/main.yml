@@ -1,0 +1,46 @@
+- name: upgrade all casks
+  community.general.homebrew_cask:
+    upgrade_all: true
+
+- name: install homebrew cask packages
+  community.general.homebrew_cask:
+    name:
+      - 1password
+      - android-studio
+      - discord
+      - firefox
+      - google-chrome
+      - iina
+      - notion
+      - obsidian
+      - orbstack
+      - phpstorm
+      - postman
+      - pushplaylabs-sidekick
+      - raycast
+      - rectangle
+      - sequel-ace
+      - slack
+      - the-unarchiver
+      - transmit
+      - visual-studio-code
+      - warp
+      - zoom
+
+- name: tap cask-fonts repository
+  community.general.homebrew_tap:
+    name: homebrew/cask-fonts
+
+- name: install fira code font
+  community.general.homebrew_cask:
+    name:
+      - font-fira-code
+
+- name: tap iandol/adobe-fonts repository
+  community.general.homebrew_tap:
+    name: iandol/adobe-fonts
+
+- name: install fira code font
+  community.general.homebrew_cask:
+    name:
+      - iandol/adobe-fonts/font-source-code-pro

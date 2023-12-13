@@ -1,0 +1,4 @@
+[all:vars]
+ansible_become=true
+ansible_become_user=your_mac_user_name
+dotfiles_repo_local_destination=/path/to/dotfiles

@@ -1,0 +1,39 @@
+- name: update homebrew
+  community.general.homebrew:
+    update_homebrew: true
+
+- name: upgrade homebrew
+  community.general.homebrew:
+    upgrade_all: true
+
+- name: install homebrew packages
+  community.general.homebrew:
+    name:
+      - asdf
+      - bat
+      - eza
+      - fd
+      - gh
+      - git
+      - git-delta
+      - go-task
+      - helix
+      - jq
+      - lazygit
+      - mas
+      - ripgrep
+      - starship
+      - trash-cli
+      - zoxide
+      - zsh
+      - zsh-autocomplete
+
+- name: tap koki-develop/docker-tags
+  community.general.homebrew_tap:
+    name: koki-develop/docker-tags
+    url: https://github.com/koki-develop/docker-tags
+
+- name: install docker-tags homebrew package
+  community.general.homebrew:
+    name:
+      - koki-develop/tap/docker-tags

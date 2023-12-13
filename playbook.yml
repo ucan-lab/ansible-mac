@@ -1,0 +1,20 @@
+---
+- name: set up
+  hosts: localhost
+  connection: local
+  gather_facts: no
+
+  roles:
+    - geerlingguy.dotfiles
+    - homebrew
+    - homebrew_cask
+    - mac_app_store
+
+  vars:
+    dotfiles_repo: "git@github.com:ucan-lab/dotfiles.git"
+    dotfiles_repo_version: main
+    dotfiles_repo_local_destination: "~/work/ucan-lab/dotfiles"
+    dotfiles_files:
+      - .gitconfig
+      - .zshrc
+      - .config/starship.toml
