@@ -10,6 +10,7 @@
   community.general.homebrew:
     name:
       - asdf
+      - awscli
       - bat
       - eza
       - fd
