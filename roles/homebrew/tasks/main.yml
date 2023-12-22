@@ -9,9 +9,9 @@
 - name: install homebrew packages
   community.general.homebrew:
     name:
-      - asdf
       - awscli
       - bat
+      - direnv
       - eza
       - fd
       - gh
@@ -23,6 +23,7 @@
       - lazygit
       - mas
       - ripgrep
+      - rtx
       - starship
       - trash-cli
       - zoxide
